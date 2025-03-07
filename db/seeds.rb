@@ -13,15 +13,16 @@ user2 = User.create!(username: "Bruno", email: "bruno@example.com", password: "s
 user3 = User.create!(username: "Carla", email: "carla@example.com", password: "senha123")
 
 products = [
-  { name: "Vestido Floral", price: 129.90, description: "Vestido longo com estampa floral, ideal para dias quentes.", category: "Feminino", size: "P", seller: user1 },
-  { name: "Blusa de Seda", price: 99.90, description: "Blusa elegante de seda, perfeita para ocasiões especiais.", category: "Feminino", size: "M", seller: user1 },
-  { name: "Calça Jeans Skinny", price: 149.90, description: "Calça jeans justa ao corpo, confortável e estilosa.", category: "Feminino", size: "38", seller: user1 },
 
-  { name: "Camiseta Polo", price: 89.90, description: "Camiseta polo de algodão, casual e confortável.", category: "Masculino", size: "G", seller: user2 },
-  { name: "Jaqueta Jeans", price: 199.90, description: "Jaqueta jeans resistente, ideal para o inverno.", category: "Masculino", size: "M", seller: user2 },
-  { name: "Bermuda de Sarja", price: 79.90, description: "Bermuda casual de sarja, ideal para dias quentes.", category: "Masculino", size: "42", seller: user2 },
+  { name: "Vestido Floral", price: 129.90, description: "Vestido longo com estampa floral, ideal para dias quentes.", category: "Feminino", size: "P", user: user_1 },
+  { name: "Blusa de Seda", price: 99.90, description: "Blusa elegante de seda, perfeita para ocasiões especiais.", category: "Feminino", size: "M", user: user_2 },
+  { name: "Calça Jeans Skinny", price: 149.90, description: "Calça jeans justa ao corpo, confortável e estilosa.", category: "Feminino", size: "38", user: user_3 },
 
-  { name: "Macacão de Algodão", price: 59.90, description: "Macacão infantil super confortável, feito 100% de algodão.", category: "Infantil", size: "2 anos", seller: user3 },
-  { name: "Conjunto Moletom", price: 109.90, description: "Conjunto de moletom quentinho para o inverno.", category: "Infantil", size: "4 anos", seller: user3 },
-  { name: "Vestido Infantil Estampado", price: 89.90, description: "Vestido colorido e alegre, ideal para festas.", category: "Infantil", size: "6 anos", seller: user3 }
+  { name: "Camiseta Polo", price: 89.90, description: "Camiseta polo de algodão, casual e confortável.", category: "Masculino", size: "G", user: user_4 },
+  { name: "Jaqueta Jeans", price: 199.90, description: "Jaqueta jeans resistente, ideal para o inverno.", category: "Masculino", size: "M", user: user_5 },
+  { name: "Bermuda de Sarja", price: 79.90, description: "Bermuda casual de sarja, ideal para dias quentes.", category: "Masculino", size: "42", user: user_6 },
+
+  { name: "Macacão de Algodão", price: 59.90, description: "Macacão infantil super confortável, feito 100% de algodão.", category: "Infantil", size: "2 anos", user: user_7 },
+  { name: "Conjunto Moletom", price: 109.90, description: "Conjunto de moletom quentinho para o inverno.", category: "Infantil", size: "4 anos", user: user_8 },
+  { name: "Vestido Infantil Estampado", price: 89.90, description: "Vestido colorido e alegre, ideal para festas.", category: "Infantil", size: "6 anos", user: user_9 }
 ]
