@@ -1,0 +1,12 @@
+<div class= "container">
+<h1>Lista de Produtos</h1>
+
+<% @products.each do |product| %>
+    <div class="card mb-4">
+    <h2><%= product.name %></h2>
+    <p><strong>Preço:</strong> <%= product.price %></p>
+    <p><strong>Descrição:</strong> <%= product.description %></p>
+    </div>
+<% end %>
+
+</div>
