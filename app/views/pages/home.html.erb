@@ -1,5 +1,9 @@
-<h1>Bem-vindo ao New Again!</h1>
-<p>O melhor lugar para comprar e vender roupas novas ou semi-novas.</p>
+<div class="banner-container">
+  <%= image_tag("banner-home.jpg", alt: "Banner da NewAgain", class: "banner-img") %>
+  <%= image_tag("logo-new-again.png", alt: "Logo da NewAgain", class: "logo") %>
+</div>
+
+<p class="paragrafo-home">O melhor lugar para comprar e vender roupas novas ou semi-novas!</p>
 
 <% if user_signed_in? %>
   <div class="cta">
