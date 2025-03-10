@@ -34,7 +34,7 @@
         <p>Sem imagem disponível</p>
       <% end %>
       <%= link_to 'Ver Produto', product_path(product), class: 'btn btn-info' %>
-      <%= link_to 'Comprar', new_order_path(product_id: product.id), class: 'btn btn-primary' %>
+      <%= button_to 'Comprar', orders_path(product_id: product.id), method: :post, class: 'btn btn-primary' %>
       <% if user_signed_in? && product.user == current_user %>
       <%= link_to 'editar', edit_product_path(product), class: 'btn btn-primary' %>
       <% end %>
