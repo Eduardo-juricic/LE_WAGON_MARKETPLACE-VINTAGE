@@ -1,0 +1,10 @@
+<h1>Meus Pedidos</h1>
+
+<% @orders.each do |order| %>
+  <div class="order">
+    <p><strong>Produto:</strong> <%= order.product.name %></p>
+    <p>Status: <%= order.status %></p>
+  </div>
+<% end %>
+
+<%= link_to 'Voltar à Página Inicial', root_path %>
