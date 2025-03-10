@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :products
-  resources :orders
+  resources :orders, only: [:index, :create, :show]
   resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

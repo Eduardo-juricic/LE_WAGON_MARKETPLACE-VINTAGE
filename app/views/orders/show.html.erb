@@ -1,0 +1,7 @@
+<h1>Pedido Detalhado</h1>
+
+<p><strong>Usuário:</strong> <%= @order.user.email %></p>
+<p><strong>Produto:</strong> <%= @order.product.name %></p>
+<p><strong>Status do Pedido:</strong> <%= @order.status %></p>
+
+<%= link_to 'Voltar à Home', root_path, class: 'btn btn-primary' %>
