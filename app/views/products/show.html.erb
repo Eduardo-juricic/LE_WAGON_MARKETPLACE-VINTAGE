@@ -1,0 +1,20 @@
+<div class="container mt-3">
+   <h1 class="mb-4"><%= @product.name %></h1>
+   <div class="row">
+   <div class="col-md-6">
+   <p><strong>Preço:</strong> <%= number_to_currency(@product.price, unit: 'R$ ') %></p>
+      <p><strong>Descrição:</strong> <%= @product.description %></p>
+      <p><strong>Categoria:</strong> <%= @product.category %></p>
+      <p><strong>Tamanho:</strong> <%= @product.size %></p>
+      <p><strong>Vendido por:</strong> <%= @product.user.username %></p>
+    </div>
+    <div class="col-md-6">
+  <% if @product.image.attached? %>
+    <%= image_tag @product.image, class: "img-fluid" %>
+  <% else %>
+    <p>Sem imagem</p>
+  <% end %>
+</div>
+</div>
+  <%= link_to "Voltar", root_path, class: "btn btn-secondary mt-3" %>
+</div>

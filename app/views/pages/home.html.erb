@@ -7,7 +7,7 @@
 
 <% if user_signed_in? %>
   <div class="cta">
-    <%= link_to 'Cadastrar Novo Produto', new_product_path, class: 'btn btn-success' %>
+    <%= link_to 'Venda aqui', new_product_path, class: 'btn btn-success' %>
   </div>
 <% else %>
   <div class="cta">
@@ -27,6 +27,12 @@
       <p><strong>Preço:</strong> R$ <%= product.price %></p>
       <p><strong>Categoria:</strong> <%= product.category %></p>
       <p><strong>Tamanho:</strong> <%= product.size %></p>
+
+      <% if product.image.attached? %>
+      <%= image_tag product.image, class: 'product-image', alt: product.name %>
+      <% else %>
+        <p>Sem imagem disponível</p>
+      <% end %>
       <%= link_to 'Ver Produto', product_path(product), class: 'btn btn-info' %>
       <%= link_to 'Comprar', new_order_path(product_id: product.id), class: 'btn btn-primary' %>
     </div>
