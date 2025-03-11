@@ -12,8 +12,8 @@
 <% else %>
   <div class="cta">
     <p>Cadastre-se ou faça login para começar a vender seus produtos.</p>
-    <%= link_to 'Cadastrar-se', new_user_registration_path, class: 'btn btn-primary' %> |
-    <%= link_to 'Entrar', new_user_session_path, class: 'btn btn-secondary' %>
+    <%= link_to 'Criar conta', new_user_registration_path, class: 'btn btn-primary conta-btn' %> |
+    <%= link_to 'Fazer login', new_user_session_path, class: 'btn btn-secondary login-btn' %>
   </div>
 <% end %>
 
@@ -22,22 +22,31 @@
 <div class="products-list">
   <% @products.each do |product| %>
     <div class="product-card">
-      <h3><%= product.name %></h3>
-      <p><%= product.description %></p>
-      <p><strong>Preço:</strong> R$ <%= product.price %></p>
-      <p><strong>Categoria:</strong> <%= product.category %></p>
-      <p><strong>Tamanho:</strong> <%= product.size %></p>
+      <a href="<%= product_path(product) %>" class="product-card__link">
 
-      <% if product.image.attached? %>
-      <%= image_tag product.image, class: 'product-image', alt: product.name %>
-      <% else %>
-        <p>Sem imagem disponível</p>
-      <% end %>
-      <%= link_to 'Ver produto', product_path(product), class: 'btn btn-info custom-btn-info' %>
-      <%= button_to 'Comprar', orders_path(product_id: product.id), method: :post, class: 'btn btn-buy' %>
-      <% if user_signed_in? && product.user == current_user %>
-      <%= link_to 'editar', edit_product_path(product), class: 'btn btn-primary' %>
-      <% end %>
+        <div class="product-card__image">
+          <% if product.image.attached? %>
+            <%= image_tag product.image, class: 'product-image', alt: product.name %>
+          <% else %>
+            <p>Sem imagem disponível</p>
+          <% end %>
+        </div>
+
+        <div class="product-card__info">
+          <p class="product-card__price">R$ <%= product.price %></p>
+          <p class="product-card__name"><%= product.name %></p>
+          <p class="product-card__category"><%= product.category %></p>
+        </div>
+
+      </a>
+
+      <div class="product-card__actions">
+        <%= link_to 'Ver produto', product_path(product), class: 'btn btn-info custom-btn-info' %>
+        <%= button_to 'Comprar', orders_path(product_id: product.id), method: :post, class: 'btn btn-buy' %>
+        <% if user_signed_in? && product.user == current_user %>
+          <%= link_to 'Editar', edit_product_path(product), class: 'btn btn-primary' %>
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>
