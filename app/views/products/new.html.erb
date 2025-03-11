@@ -1,19 +1,18 @@
 <div class="container mt-3">
-  <h2>Vender Agora</h2>
+  <h2>Vender produto</h2>
 
   <%= simple_form_for @product, html: { multipart: true } do |f| %>
-    <%= f.input :name, label: "Nome do Produto" %>
+    <%= f.input :name, label: "Nome do produto" %>
     <%= f.input :price, label: "Preço (R$)", input_html: { step: 0.01 } %>
     <%= f.input :description, label: "Descrição", as: :text %>
     <%= f.input :category, label: "Categoria" %>
     <%= f.input :size, label: "Tamanho" %>
-
     <%= f.input :image, as: :file, label: "Imagem do Produto", input_html: { accept: "image/*", style: "width: 50%;" } %>
 
     <div class="mt-3">
-      <%= f.submit "Criar Produto", class: "btn btn-success" %>
+      <%= f.submit "Criar produto", class: "btn btn-success btn-editar" %>
     </div>
   <% end %>
 
-  <%= link_to "Voltar", root_path, class: "btn btn-secondary mt-3" %>
+  <%= link_to "Voltar", root_path, class: "btn btn-secondary mt-3 btn-voltar" %>
 </div>
