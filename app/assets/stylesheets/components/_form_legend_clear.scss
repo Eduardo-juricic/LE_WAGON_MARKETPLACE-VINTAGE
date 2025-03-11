@@ -8,3 +8,109 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+.container {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  width: 50%;
+}
+
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007782;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #007782;
+  outline: none;
+}
+
+.btn-criar {
+  background-color: #007782;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken(#007782, 10%);
+  }
+}
+
+.btn-voltar {
+  background-color: #8bcba5;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s ease;
+  border: none;
+  outline: none;
+  margin: 0 auto;
+  text-align: center;
+
+  &:hover {
+    background-color: darken(#9febbd, 10%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.btn-editar {
+  background-color: #007782;
+  color: rgb(253, 251, 251);
+  padding: 10px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s ease;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: darken(#f6f8f8, 10%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.mt-3 {
+  margin-top: 1.5rem;
+}
