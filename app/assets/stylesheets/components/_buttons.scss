@@ -41,3 +41,69 @@
     box-shadow: none;
   }
 }
+
+.conta-btn{
+  background-color: #007782;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s ease;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: darken(#9febbd, 10%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.login-btn{
+  background-color: #8bcba5;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s ease;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: darken(#9febbd, 10%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.venda-btn{
+  background-color: #007782;
+  color: rgb(253, 251, 251);
+  padding: 10px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s ease;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: darken(#f6f8f8, 10%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
