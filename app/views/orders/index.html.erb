@@ -4,8 +4,8 @@
   <div class="order">
     <p><strong>Produto:</strong> <%= order.product.name %></p>
     <p>Status: <%= order.status %></p>
+    <%= link_to 'Deletar', order_path(order), data: { turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja excluir este pedido?' }, class: 'btn btn-danger' %>
   </div>
 <% end %>
 
 <%= link_to 'Voltar à Página Inicial', root_path, class: 'btn btn-primary' %>
-
