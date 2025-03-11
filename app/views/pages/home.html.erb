@@ -3,15 +3,15 @@
   <%= image_tag("logo-new-again.png", alt: "Logo da NewAgain", class: "logo") %>
 </div>
 
-<p class="paragrafo-home">O melhor lugar para comprar e vender roupas novas ou semi-novas!</p>
+<p class="paragrafo-home">O melhor marketplace de moda sustentável.</p>
 
 <% if user_signed_in? %>
   <div class="cta">
-    <%= link_to 'Venda aqui', new_product_path, class: 'btn btn-success' %>
+    <%= link_to 'Começar a vender', new_product_path, class: 'btn btn-success venda-btn' %>
   </div>
 <% else %>
   <div class="cta">
-    <p>Cadastre-se ou faça login para começar a vender seus produtos.</p>
+    <p>Compra e venda de roupas novas e semi-novas</p>
     <%= link_to 'Criar conta', new_user_registration_path, class: 'btn btn-primary conta-btn' %> |
     <%= link_to 'Fazer login', new_user_session_path, class: 'btn btn-secondary login-btn' %>
   </div>
