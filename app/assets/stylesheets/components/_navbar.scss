@@ -1,6 +1,8 @@
 .navbar-lewagon {
+  background-color: #007782; /* Cor de fundo da navbar */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombras suaves para dar profundidade */
   justify-content: space-between;
-  background: white;
+  padding: 15px 30px; /* Espaçamento interno da navbar */
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,7 +10,7 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;;
+  width: 40px; /* Ajuste do tamanho do logo */
   border-radius: 50%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -17,4 +19,82 @@
   width: 200px;
   display: block;
   margin: 0 auto;
+}
+
+.navbar-toggler {
+  border: none; /* Remove a borda do botão do menu mobile */
+  background-color: transparent; /* Fundo transparente para o ícone */
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* Cor do ícone do menu mobile */
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.nav-link {
+  color: #fff; /* Cor do texto do link */
+  font-weight: 500;
+  padding: 10px 15px;
+  font-size: 16px;
+  transition: color 0.3s ease; /* Suavizando a transição ao passar o mouse */
+}
+
+.nav-link:hover {
+  color: #f8f8f8; /* Cor de destaque ao passar o mouse */
+  text-decoration: none; /* Remover o sublinhado ao passar o mouse */
+}
+
+.nav-item.active .nav-link {
+  color: #f8f8f8; /* Cor ativa do link */
+  font-weight: 600; /* Destacar o link ativo */
+}
+
+.form-control {
+  width: 250px; /* Largura do campo de pesquisa */
+  padding: 8px 12px;
+  border-radius: 25px; /* Bordas arredondadas para o campo de pesquisa */
+  border: 1px solid #ccc; /* Cor da borda */
+}
+
+.btn-primary {
+  background-color: #007782; /* Cor de fundo do botão */
+  border-color: #007782; /* Cor da borda do botão */
+  padding: 8px 15px;
+  border-radius: 25px; /* Bordas arredondadas para o botão */
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: #005f60; /* Cor de fundo ao passar o mouse */
+  border-color: #005f60;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%; /* Avatar redondo */
+  overflow: hidden;
+}
+
+.dropdown-menu {
+  width: 200px; /* Largura do menu suspenso */
+  border-radius: 8px; /* Bordas arredondadas do menu suspenso */
+}
+
+.dropdown-item {
+  font-size: 14px;
+  padding: 10px 15px;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f4f4f4; /* Cor de fundo do item ao passar o mouse */
 }
