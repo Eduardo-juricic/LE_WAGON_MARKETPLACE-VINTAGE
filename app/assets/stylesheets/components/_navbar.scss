@@ -2,7 +2,7 @@
   background-color: #007782;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   justify-content: space-between;
-  padding: 15px 30px;
+  padding: 10px 25px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,8 +10,8 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 50px;
-  border-radius: 50%;
+  width: 55px;
+  border-radius: 55%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -27,7 +27,7 @@
 }
 
 .navbar-toggler-icon {
-  background-color: #fff;
+  background-color: #080808;
 }
 
 .navbar-nav {
@@ -56,33 +56,31 @@
 }
 
 .form-control {
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
   padding: 8px 12px;
   border-radius: 25px;
   border: 1px solid #ccc;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-btn {
   background-color: #f3f5f5;
   border-color: #f7fafb;
   padding: 8px 15px;
-  border-radius: 25px;
+  border-radius: 50px;
   font-size: 14px;
   font-weight: 500;
-}
-
-.fa-search{
-  background-color: #fbfefe;
-  border-color: #f7fafb;
-  padding: 8px 15px;
-  border-radius: 25px;
-  font-size: 14px;
-  font-weight: 500;
+  margin-left: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-primary:hover {
-  background-color: #005f60;
-  border-color: #005f60;
+  background-color: #f2f5f5;
+  border-color: #f6fafa;
 }
 
 .avatar {
@@ -106,4 +104,11 @@
 
 .dropdown-item:hover {
   background-color: #f4f4f4;
+}
+
+.btn-white{
+  background-color: #f8fafb;
+  border-radius: 30%;
+  padding: 10px 20px;
+  cursor: pointer;
 }
