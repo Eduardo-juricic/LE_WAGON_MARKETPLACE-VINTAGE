@@ -7,7 +7,7 @@
     <%= f.input :description, label: "Descrição", as: :text %>
     <%= f.input :category, label: "Categoria" %>
     <%= f.input :size, label: "Tamanho" %>
-    <%= f.input :image, as: :file, label: "Imagem do Produto", input_html: { accept: "image/*", style: "width: 50%;" } %>
+    <%= f.input :photo, as: :file, label: "Imagem do Produto" %>
 
     <div class="mt-3">
       <%= f.submit "Criar produto", class: "btn btn-success btn-editar" %>

@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
   belongs_to :user
   has_many :orders, dependent: :destroy
-  has_one_attached :image
+  has_one_attached :photo
 
   validates :name, presence: true
 end
