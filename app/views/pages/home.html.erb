@@ -25,8 +25,8 @@
       <a href="<%= product_path(product) %>" class="product-card__link">
 
         <div class="product-card__image">
-          <% if product.image.attached? %>
-            <%= image_tag product.image, class: 'product-image', alt: product.name %>
+          <% if product.photo.attached? %>
+            <%= image_tag product.photo, class: 'product-image', alt: product.name %>
           <% else %>
             <p>Sem imagem disponível</p>
           <% end %>

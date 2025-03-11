@@ -10,14 +10,14 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-      <%= form_with url: products_path, method: :get, class: "d-flex" do %>
-      <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Type a keyword"
-        %>
-      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
-    <% end %>
+        <%= form_with url: products_path, method: :get, class: "d-flex search-form" do %>
+          <div class="input-group">
+            <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Pesquisar" %>
+            <button type="submit" class="btn btn-white">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        <% end %>
 
         <% if user_signed_in? %>
           <li class="nav-item active">
