@@ -9,8 +9,8 @@
       <p><strong>Vendido por:</strong> <%= @product.user.username %></p>
     </div>
     <div class="col-md-6 text-center">
-  <% if @product.image.attached? %>
-    <%= image_tag @product.image, class: "img-fluid", style: "max-width: 300px; height: auto;" %>
+  <% if @product.photo.attached? %>
+    <%= image_tag @product.photo, class: "img-fluid", style: "max-width: 300px; height: auto;" %>
   <% else %>
     <p>Sem imagem</p>
   <% end %>
