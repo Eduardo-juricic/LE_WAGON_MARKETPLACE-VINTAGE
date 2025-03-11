@@ -1,8 +1,8 @@
 .navbar-lewagon {
-  background-color: #007782; /* Cor de fundo da navbar */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombras suaves para dar profundidade */
+  background-color: #007782;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   justify-content: space-between;
-  padding: 15px 30px; /* Espaçamento interno da navbar */
+  padding: 15px 30px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,7 +10,7 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px; /* Ajuste do tamanho do logo */
+  width: 50px;
   border-radius: 50%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -22,12 +22,12 @@
 }
 
 .navbar-toggler {
-  border: none; /* Remove a borda do botão do menu mobile */
-  background-color: transparent; /* Fundo transparente para o ícone */
+  border: none;
+  background-color: transparent;
 }
 
 .navbar-toggler-icon {
-  background-color: #fff; /* Cor do ícone do menu mobile */
+  background-color: #fff;
 }
 
 .navbar-nav {
@@ -38,54 +38,63 @@
 }
 
 .nav-link {
-  color: #fff; /* Cor do texto do link */
+  color: #fff;
   font-weight: 500;
   padding: 10px 15px;
   font-size: 16px;
-  transition: color 0.3s ease; /* Suavizando a transição ao passar o mouse */
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #f8f8f8; /* Cor de destaque ao passar o mouse */
-  text-decoration: none; /* Remover o sublinhado ao passar o mouse */
+  color: #f8f8f8;
+  text-decoration: none;
 }
 
 .nav-item.active .nav-link {
-  color: #f8f8f8; /* Cor ativa do link */
-  font-weight: 600; /* Destacar o link ativo */
+  color: #f8f8f8;
+  font-weight: 600;
 }
 
 .form-control {
-  width: 250px; /* Largura do campo de pesquisa */
+  width: 250px;
   padding: 8px 12px;
-  border-radius: 25px; /* Bordas arredondadas para o campo de pesquisa */
-  border: 1px solid #ccc; /* Cor da borda */
+  border-radius: 25px;
+  border: 1px solid #ccc;
 }
 
-.btn-primary {
-  background-color: #007782; /* Cor de fundo do botão */
-  border-color: #007782; /* Cor da borda do botão */
+.search-btn {
+  background-color: #f3f5f5;
+  border-color: #f7fafb;
   padding: 8px 15px;
-  border-radius: 25px; /* Bordas arredondadas para o botão */
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.fa-search{
+  background-color: #fbfefe;
+  border-color: #f7fafb;
+  padding: 8px 15px;
+  border-radius: 25px;
   font-size: 14px;
   font-weight: 500;
 }
 
 .btn-primary:hover {
-  background-color: #005f60; /* Cor de fundo ao passar o mouse */
+  background-color: #005f60;
   border-color: #005f60;
 }
 
 .avatar {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%; /* Avatar redondo */
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
   overflow: hidden;
 }
 
 .dropdown-menu {
-  width: 200px; /* Largura do menu suspenso */
-  border-radius: 8px; /* Bordas arredondadas do menu suspenso */
+  width: 200px;
+  border-radius: 8px;
 }
 
 .dropdown-item {
@@ -96,5 +105,5 @@
 }
 
 .dropdown-item:hover {
-  background-color: #f4f4f4; /* Cor de fundo do item ao passar o mouse */
+  background-color: #f4f4f4;
 }
