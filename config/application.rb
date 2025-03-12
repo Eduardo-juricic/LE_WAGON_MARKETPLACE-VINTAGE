@@ -1,4 +1,9 @@
-require 'dotenv/load'
+#Retirar se nao der certo
+begin
+  require 'dotenv/load'
+rescue LoadError => e
+  raise e unless ENV['RAILS_ENV'] == "production"
+end
 require_relative "boot"
 
 require "rails/all"
