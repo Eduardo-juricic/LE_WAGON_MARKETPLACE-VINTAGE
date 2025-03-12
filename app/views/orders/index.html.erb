@@ -23,7 +23,7 @@
         </div>
 
         <%= link_to 'Ver Produto', order_path(order), class: 'btn btn-info custom btn-inf' %>
-        <%= link_to 'Deletar', order_path(order), data: { turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja excluir este pedido?' }, class: 'btn btn-danger' %>
+        <%= link_to 'Deletar', order_path(order), data: { turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja excluir este pedido?' }, class: 'btn btn-action btn-delete' %>
       </div>
     <% end %>
   </div>

@@ -19,6 +19,6 @@
   </div>
 
     <%= link_to 'Voltar aos Pedidos', orders_path, class: "btn btn-secondary mt-3 btn-voltar" %>
-    <%= link_to 'Cancelar Pedido', order_path(@order), data: { turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja cancelar este pedido?' }, class: "btn btn-danger" %>
+    <%= link_to 'Cancelar Pedido', order_path(@order), data: { turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja cancelar este pedido?' }, class: "btn btn-action btn-delete" %>
 
 </div>
