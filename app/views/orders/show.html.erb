@@ -1,7 +1,24 @@
-<h1>Pedido Detalhado</h1>
+<div class="container mt-3">
+  <h2 class="mb-4">Pedido Detalhado</h2>
 
-<p><strong>Usuário:</strong> <%= @order.user.email %></p>
-<p><strong>Produto:</strong> <%= @order.product.name %></p>
-<p><strong>Status do Pedido:</strong> <%= @order.status %></p>
+  <div class="row">
+    <div class="col-md-6">
+      <p><strong>Usuário:</strong> <%= @order.user.username %></p>
+      <p><strong>Produto:</strong> <%= @order.product.name %></p>
+      <p><strong>Status do Pedido:</strong> <%= @order.status.capitalize %></p>
+      <p><strong>Preço:</strong> <%= number_to_currency(@order.product.price, unit: 'R$ ') %></p>
+    </div>
 
-<%= link_to 'Voltar à Home', root_path, class: 'btn btn-primary' %>
+    <div class="col-md-6 text-center">
+      <% if @order.product.photo.attached? %>
+        <%= image_tag @order.product.photo, class: "img-fluid", style: "max-width: 300px; height: auto;" %>
+      <% else %>
+        <p>Sem imagem do produto</p>
+      <% end %>
+    </div>
+  </div>
+
+    <%= link_to 'Voltar aos Pedidos', orders_path, class: "btn btn-secondary mt-3 btn-voltar" %>
+    <%= link_to 'Cancelar Pedido', order_path(@order), data: { turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja cancelar este pedido?' }, class: "btn btn-danger" %>
+
+</div>
