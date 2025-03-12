@@ -1,5 +1,5 @@
-require 'dotenv/load'
-
+require 'dotenv/load' unless Rails.env.production?
+#REMENBER REMOVER APARTIR DO UNLESS
 require_relative "boot"
 
 require "rails/all"
