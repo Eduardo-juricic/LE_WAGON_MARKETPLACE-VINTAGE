@@ -1,4 +1,4 @@
-#Retirar se nao der certo
+
 begin
   require 'dotenv/load'
 rescue LoadError => e
