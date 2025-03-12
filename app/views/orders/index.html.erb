@@ -1,11 +1,11 @@
-<div class="container">
+<div class="container mt-3">
   <h2 class="page-title">Meus Pedidos</h2>
 
   <div class="orders-list">
     <% @orders.each do |order| %>
       <div class="order-card">
-        <a href="<%= product_path(order.product) %>" class="order-card__link">
 
+        <a href="<%= product_path(order.product) %>" class="order-card__link">
           <div class="order-card__image">
             <% if order.product.photo.attached? %>
               <%= image_tag order.product.photo, class: 'product-image', alt: order.product.name %>
@@ -13,21 +13,24 @@
               <p>Sem imagem disponível</p>
             <% end %>
           </div>
-
-          <div class="order-card__info">
-            <p class="order-card__price">R$ <%= order.product.price %></p>
-            <p class="order-card__name"><%= order.product.name %></p>
-            <p class="order-card__category"><%= order.product.category %></p>
-            <p class="order-card__status"><strong>Status:</strong> <%= order.status %></p>
-          </div>
         </a>
 
-        <div class="order-card__actions">
-          <%= link_to 'Ver Produto', product_path(order.product), class: 'btn btn-info custom-btn-info' %>
-          <%= link_to 'Deletar', order_path(order), data: { turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja excluir este pedido?' }, class: 'btn btn-danger' %>
+        <div class="order-card__info mt-3">
+          <h5 class="order-card__name"><%= order.product.name %></h5>
+          <p class="order-card__category"><%= order.product.category %></p>
+          <p class="order-card__price text-muted">R$ <%= number_to_currency(order.product.price, unit: 'R$ ') %></p>
+          <p class="order-card__status"><strong>Status:</strong> <%= order.status.capitalize %></p>
         </div>
+
+        <%= link_to 'Ver Produto', order_path(order), class: 'btn btn-info custom btn-inf' %>
+        <%= link_to 'Deletar', order_path(order), data: { turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja excluir este pedido?' }, class: 'btn btn-danger' %>
       </div>
     <% end %>
   </div>
-<%= link_to 'Voltar à Página Inicial', root_path, class: 'btn btn-primary btn-editar' %>
+
+ <div class="mt-3 total-pedido">
+    <p><strong>Total de pedidos:</strong> <%= number_to_currency(@total, unit: 'R$ ') %></p>
+  </div>
+
+  <%= link_to 'Voltar à Página Inicial', root_path, class: 'btn btn-primary btn-voltar' %>
 </div>

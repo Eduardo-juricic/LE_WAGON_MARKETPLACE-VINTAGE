@@ -4,3 +4,45 @@
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
+
+.page-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007782;
+  margin-bottom: 1rem;
+}
+
+.product-detail {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid #007782;
+}
+
+.custom-btn-info {
+  background-color: #007782;
+  color: white;
+  border-radius: 5px;
+}
+
+.custom-btn-info:hover {
+  background-color: #005f5f;
+}
+
+.btn-light-green {
+  background-color: #A5F1C4;
+  color: #007782;
+  border: none;
+}
+
+.btn-light-green:hover {
+  background-color: #007782;
+  color: white;
+}
