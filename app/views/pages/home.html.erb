@@ -42,7 +42,7 @@
 
       <div class="product-card__actions">
         <%= link_to 'Ver produto', product_path(product), class: 'btn btn-info custom-btn-info' %>
-        <%= button_to 'Comprar', orders_path(product_id: product.id), method: :post, class: 'btn btn-buy' %>
+        <%= button_to 'Comprar', orders_path(product_id: product.id), class: 'btn btn-buy' %>
         <% if user_signed_in? && product.user == current_user %>
           <%= link_to 'Editar', edit_product_path(product), class: 'btn btn-primary btn-editar' %>
         <% end %>
