@@ -3,7 +3,6 @@
 
   <div class="row">
     <div class="col-md-6">
-      <p><strong>Usuário:</strong> <%= @order.user.username %></p>
       <p><strong>Produto:</strong> <%= @order.product.name %></p>
       <p><strong>Status do Pedido:</strong> <%= @order.status.capitalize %></p>
       <p><strong>Preço:</strong> <%= number_to_currency(@order.product.price, unit: 'R$ ') %></p>
