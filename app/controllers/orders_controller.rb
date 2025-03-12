@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   def create
-    @order = Order.new(product_id: params[:product_id])
+    @order = Order.new(product_id: params[:product_id], quantity: params[:quantity] || 1)
     @order.user = current_user
     @order.status = "pending"
 
@@ -13,10 +13,11 @@ class OrdersController < ApplicationController
 
   def index
     @orders = current_user.orders
+    @total = @orders.sum { |order| order.product.price.to_f * order.quantity.to_f }
   end
 
   def destroy
-    @order = current_user.orders.find_by(id: params[:id]) # Busca correta
+    @order = current_user.orders.find_by(id: params[:id])
 
   if @order
     @order.destroy
@@ -24,5 +25,8 @@ class OrdersController < ApplicationController
   else
     redirect_to orders_path, alert: 'Pedido não encontrado.'
   end
+  end
+  def show
+    @order = Order.find(params[:id])
   end
 end
